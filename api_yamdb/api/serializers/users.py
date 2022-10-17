@@ -1,7 +1,6 @@
+from api.validators import validate_unique_case_insensitive_username
 from django.contrib.auth import get_user_model
 from rest_framework import serializers
-
-from api.validators import validate_unique_case_insensitive_username
 
 User = get_user_model()
 

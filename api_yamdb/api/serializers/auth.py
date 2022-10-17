@@ -1,11 +1,9 @@
-from django.contrib.auth import get_user_model
-from django.contrib.auth.hashers import check_password
-from rest_framework import exceptions, serializers
-
 from api.validators import (validate_forbidden_username,
                             validate_unique_case_insensitive_email,
                             validate_unique_case_insensitive_username)
-
+from django.contrib.auth import get_user_model
+from django.contrib.auth.hashers import check_password
+from rest_framework import exceptions, serializers
 
 User = get_user_model()
 

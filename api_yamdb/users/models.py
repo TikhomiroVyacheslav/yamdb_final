@@ -1,5 +1,8 @@
 import uuid
 
+from api.validators import (validate_forbidden_username,
+                            validate_unique_case_insensitive_email,
+                            validate_unique_case_insensitive_username)
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth.models import AbstractUser
 from django.contrib.auth.validators import UnicodeUsernameValidator
@@ -9,9 +12,6 @@ from django.template.loader import render_to_string
 from django.utils.translation import gettext_lazy
 from rest_framework_simplejwt.tokens import RefreshToken
 
-from api.validators import (validate_forbidden_username,
-                            validate_unique_case_insensitive_email,
-                            validate_unique_case_insensitive_username)
 from api_yamdb.settings import DEFAULT_FROM_EMAIL
 
 

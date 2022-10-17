@@ -1,12 +1,11 @@
+from api.permissions import IsAdminOnlyPermission
+from api.serializers.users import UserMeSerializer, UserSerializer
 from django.contrib.auth import get_user_model
 from rest_framework import status, viewsets
 from rest_framework.decorators import action
 from rest_framework.filters import SearchFilter
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
-
-from api.permissions import IsAdminOnlyPermission
-from api.serializers.users import UserMeSerializer, UserSerializer
 
 
 class UserViewSet(viewsets.ModelViewSet):
