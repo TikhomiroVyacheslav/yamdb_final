@@ -7,7 +7,7 @@ services:
     env_file:
       - ./.env
   web:
-    image: tikhomirovyacheslav/web
+    image: tikhomirovyacheslav/web:latest
     restart: always
     volumes:
       - static_value:/app/static/
